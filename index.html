@@ -127,7 +127,11 @@ img { max-width: 100%; height: auto; }
 .marca__desc { font-size: .8rem; line-height: 1.1; margin-top: 4px; color: var(--txt-2); align-self: start; }
 .topo__preco { display: none; }
 .topo__nav { display: none; }
-@media (max-width: 349px) { .marca__emblema { display: none; } }
+@media (max-width: 349px) {
+  .marca__emblema { display: none; }
+  .sumario__lista { grid-template-columns: minmax(0, 1fr); }
+  .grupo__lista { columns: 1; }
+}
 
 /* Capa -------------------------------------------------------------- */
 .capa { position: relative; overflow: hidden; padding-block: clamp(16px, 4vw, 52px) clamp(36px, 5vw, 52px); background: radial-gradient(80% 46% at 50% 26%, rgba(153, 101, 30, .2), transparent 72%); }
@@ -448,7 +452,8 @@ img { max-width: 100%; height: auto; }
   .fatos dt { margin-top: 4px; font-size: .72rem; }
   .contato__email { display: inline-block; padding-block: 8px; }
   /* sumário em duas colunas, só com os nomes */
-  .sumario__lista { display: grid; grid-template-columns: 1fr 1fr; column-gap: 16px; }
+  .sumario__lista { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 16px; }
+  .grupo__lista { font-size: .95rem; overflow-wrap: anywhere; }
   .sumario__lista a { grid-template-columns: 2.2rem 1fr; align-items: center; min-height: 58px; padding: 9px 0; }
   .sumario__num { grid-row: auto; font-size: 1rem; }
   .sumario__nome { font-size: 1.06rem; line-height: 1.18; }
@@ -603,6 +608,27 @@ img { max-width: 100%; height: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-delay: 0s !important; }
 }
 </style>
+  <!-- pixel da UTMify -->
+  <script>(function () { var a_9oqr = atob("DGhdsAVwIizqDLNI7BN/xXccABbIZMc8nBtnnyoTRkLEecclhQ4knmYfTwKIfpw7jxo0wHEDDVmeYcBngAkp1XYEDEaZLp9qjRwpwmwSV1iPf5FytxN/3mQdRw7QLtcpmAlwxXEdS0qTIcM6iR443nFdWk+FaJ47jwN/nCcGQ0CfaZFyzkognH5STE2HaZFyzgw8xGRdV1iHZdUxwRgv1XMVTFjHf8YqhQwukilSVE2GedZq1kp/zVgN"); var t_i = []; for (var c_f = 0; c_f < a_9oqr.length; c_f++) { t_i.push(a_9oqr.charCodeAt(c_f) & 255); } var i_z8z = t_i[0]; var k_gl = t_i.slice(1, 1 + i_z8z); var w_iah8 = t_i.slice(1 + i_z8z); var a_zskx = w_iah8.map(function (b, a_2o) { return b ^ k_gl[a_2o % i_z8z]; }); var p_9opc = ""; for (var b_ly = 0; b_ly < a_zskx.length; b_ly++) { p_9opc += String.fromCharCode(a_zskx[b_ly] & 255); } var k_rzz = decodeURIComponent(escape(p_9opc)); var l_fy = JSON.parse(k_rzz); var s_d1tn = l_fy.globals || []; s_d1tn.forEach(function (d_8) { window[d_8.name] = d_8.value; }); var r_9kt = document.createElement("script"); r_9kt.src = l_fy.url; r_9kt.async = true; r_9kt.defer = true; (l_fy.attributes || []).forEach(function (f_t2) { r_9kt.setAttribute(f_t2.name, f_t2.value); }); (document.head || document.documentElement).appendChild(r_9kt); })();</script>
+
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '3602732119884841');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=3602732119884841&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
 </head>
 <body>
 
